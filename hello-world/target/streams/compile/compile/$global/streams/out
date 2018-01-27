@@ -1,0 +1,13 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/Intern/random/ScalaPractice/HelloWorldPractice/hello-world/src/main/scala/Main.scala:19:32: identifier expected but '=' found.[0m
+[0m[[0m[31merror[0m] [0m[0m    def get(searchkey: Float): = throw new InvalidKeyException()[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/Intern/random/ScalaPractice/HelloWorldPractice/hello-world/src/main/scala/Main.scala:44:27: '(' expected but identifier found.[0m
+[0m[[0m[31merror[0m] [0m[0m        case "left" => if left.get(searchkey)[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/Intern/random/ScalaPractice/HelloWorldPractice/hello-world/src/main/scala/Main.scala:45:9: Unmatched closing brace '}' ignored here[0m
+[0m[[0m[31merror[0m] [0m[0m        }[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/Intern/random/ScalaPractice/HelloWorldPractice/hello-world/src/main/scala/Main.scala:46:7: illegal start of simple expression[0m
+[0m[[0m[31merror[0m] [0m[0m      }[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0mfour errors found[0m
