@@ -7,6 +7,7 @@ object Main extends App {
     def isEmpty: Boolean
     def size: Int
     def put(newkey: Float, newvalue: String): BinaryTree
+    def get(searchkey: Float): String
   }
 
   case object EmptyTree extends BinaryTree {
@@ -16,7 +17,7 @@ object Main extends App {
     def put(newkey: Float, newvalue: String): NonEmptyTree = {
       return new NonEmptyTree(size=1, left=EmptyTree, right=EmptyTree, key=newkey, value=newvalue)
     }
-    def get(searchkey: Float): = throw new InvalidKeyException()
+    def get(searchkey: Float) = throw new InvalidKeyException()
   }
 
   case class NonEmptyTree(val size: Int, val left: BinaryTree, val right: BinaryTree, val key: Float, val value: String) extends BinaryTree {
@@ -39,10 +40,10 @@ object Main extends App {
     }
     def get(searchkey: Float): String = {
       if (searchkey == key) return value
-      val correct_side = if(newkey < key) "left" else "right"
+      val correct_side = if(searchkey < key) "left" else "right"
       return correct_side match {
-        case "left" => if left.get(searchkey)
-        }
+        case "left" => try { left.get(searchkey) } catch { case e: InvalidKeyException => right.get(searchkey) }
+        case "right" => try { right.get(searchkey) } catch { case e: InvalidKeyException => left.get(searchkey) }
       }
     }
   }
